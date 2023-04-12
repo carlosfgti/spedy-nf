@@ -1,3 +1,4 @@
 /node_modules
 step-to-step.txt
 /build
+.env
