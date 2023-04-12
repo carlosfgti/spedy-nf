@@ -1,17 +1,9 @@
-import axios from "axios";
 import { Request, Response } from "express"
+import { HttpService } from "./http/http.service";
 
 class ClientService {
   findAll = async (request: Request, response: Response): Promise<Response> => {
-    const { data, status } = await axios.get(
-      process.env.SPEDY_URL_API + '/customers',
-      {
-        headers: {
-          Accept: 'application/json',
-          'X-Api-Key': process.env.SPEDY_TOKEN_API
-        },
-      },
-    )
+    const { data, status } = await HttpService.get("/customers")
 
     return response.status(status).send({
       data: data
