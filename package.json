@@ -8,9 +8,11 @@
   },
   "devDependencies": {
     "@types/node": "^18.15.11",
+    "rimraf": "^5.0.0",
     "ts-node-dev": "^2.0.0"
   },
   "scripts": {
-    "dev": "ts-node-dev --transpile-only src/main.ts"
+    "dev": "ts-node-dev --transpile-only src/main.ts",
+    "build": "rimraf ./build && npx tsc"
   }
 }
