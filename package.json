@@ -4,9 +4,11 @@
   "main": "src/main.ts",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "typescript": "*"
   },
   "devDependencies": {
+    "@types/dotenv": "^8.2.0",
     "@types/node": "^18.15.11",
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "@typescript-eslint/parser": "^5.58.0",
