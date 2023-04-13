@@ -11,4 +11,10 @@ routes.get('/', (_: Request, response: Response) => {
   })
 })
 
+routes.get('*', (_: Request, response: Response) => {
+  response.status(404).send({
+    error: "Not Found"
+  })
+})
+
 export default routes
